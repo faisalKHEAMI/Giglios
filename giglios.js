@@ -33,16 +33,16 @@ function open_nav_bar() {
         setTimeout(() => navtext4.style.display = 'flex', 500);
         setTimeout(() => navtext5.style.display = 'flex', 500);
 
-        setTimeout(() => navSymbolsOrder.style.color = '#6BD202', 500);
-        setTimeout(() => navSymbolsPolicy.style.color = '#6BD202', 500);
-        setTimeout(() => navSymbolsLocation.style.color = '#6BD202', 500);
-        setTimeout(() => navSymbolsContact.style.color = '#6BD202', 500);
-        setTimeout(() => navSymbolsStory.style.color = '#6BD202', 500);
+        setTimeout(() => navSymbolsOrder.style.color = ' rgb(224, 230, 218)', 500);
+        setTimeout(() => navSymbolsPolicy.style.color = ' rgb(224, 230, 218)', 500);
+        setTimeout(() => navSymbolsLocation.style.color = ' rgb(224, 230, 218)', 500);
+        setTimeout(() => navSymbolsContact.style.color = ' rgb(224, 230, 218)', 500);
+        setTimeout(() => navSymbolsStory.style.color = ' rgb(224, 230, 218)', 500);
 
         setTimeout(() => {
-            burgerLine1.style.backgroundColor = '#6BD202';
-            burgerLine2.style.backgroundColor = '#6BD202';
-            burgerLine3.style.backgroundColor = '#6BD202';
+            burgerLine1.style.backgroundColor = ' rgb(224, 230, 218)';
+            burgerLine2.style.backgroundColor = ' rgb(224, 230, 218)';
+            burgerLine3.style.backgroundColor = ' rgb(224, 230, 218)';
         }, 500);
 
     } else {
@@ -62,12 +62,13 @@ function close_nav_bar() {
 
         navBarElement.classList.remove('closing');
     }, { once: true });
+    setTimeout(() => {
     navtext1.style.display = 'none';
     navtext2.style.display = 'none';
     navtext3.style.display = 'none';
     navtext4.style.display = 'none';
     navtext5.style.display = 'none';
-
+    }, 500);
 
     setTimeout(() =>  navSymbolsOrder.style.color = '#333333', 250);
     setTimeout(() =>  navSymbolsPolicy.style.color = '#333333', 250);

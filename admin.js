@@ -1,7 +1,5 @@
 $(document).ready(function () {
-    if(confirm("To allow the play of the notifiaction sound ok this")){
-        playNotificationSound();
-    }
+
     var responseOld = '';
 
 // Function to fetch orders and update the order list
@@ -16,7 +14,7 @@ $(document).ready(function () {
                     playNotificationSound();
                     console.log('AJAX success', response);
                     // Call the updateOrderList function with the received orders
-                    updateOrderList(response);
+                    updateOrderList(reponse);
                     responseOld = response;  // Update responseOld with the current response
 
 
@@ -27,7 +25,6 @@ $(document).ready(function () {
             }
         });
     }
-    fetchOrders();
     setInterval(fetchOrders,10000);
 // Function to check if two arrays are equal
     function arraysAreEqual(arr1, arr2) {

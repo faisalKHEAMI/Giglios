@@ -1,27 +1,38 @@
 /* Generic Styles */
 body {
-    background-color: #B1EE03;
+    background-color: rgb(224, 230, 218);/*old color c6c95b*/
     padding: 0;
     height: 100%;
     width: 100%;
     overflow-x: hidden;
 }
 
-.logo {
-    position: sticky;
+.topper{
+    position: fixed;
+    height: 8vh;
+    width: 100%;
+    background-color: rgba(0,0,0,0.2);
+    z-index: 2;
+    text-align: center;
+    border-radius: 10px;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    margin-top: -10px;
+}
 
+.logo {
+    margin-top: 0;
+    position: relative;
     font-family: 'Dancing Script', cursive;
     font-size: 3em;
     color: #FF0000;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    padding: 0px 20px;
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
-    margin: 0;
-    margin-left: 35%;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
     display: inline-block;
+    z-index: 3;
+    padding: 0;
 }
 
 /* Navbar Styles */
@@ -29,11 +40,13 @@ body {
     height: 40px;
     width: 10%;
     z-index: 3;
-    margin: 0;
+    background-color: transparent;
     border: none;
     font-family: inherit;
     display: flex;
     position: fixed;
+    margin-top: -5vh;
+    left: 5px;
 }
 
 .burger_button {
@@ -60,15 +73,17 @@ body {
 
 
 .nav_bar {
-
-    background-color: #6BD202;
+    background-color: RGB(193, 218, 191);
     overflow: hidden;
     top: 0;
+    margin: 0;
     left: 0;
     z-index: 2;
     width: 5vh;
     height: 100vh;
     position: fixed;
+    padding-top: 8vh;
+    box-shadow: 20px 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .expand {
@@ -83,7 +98,10 @@ body {
     justify-content: center;
     align-items: center;
     animation: 1s ease-in-out open_nav;
-    padding-top: 10%;
+    padding-top: 10vh;
+
+
+
 }
 .nav_bar a {
     display: flex;
@@ -91,16 +109,18 @@ body {
     margin: 50px 10px;
     cursor: pointer;
     position: sticky;
-    color: #6BD202;
+    color: #c6c95b;
     text-decoration:none;
+    align-items: center;
 }
 a{
+
     text-decoration:none;
-    padding-top: 30%;
+
 }
 
 .nav_bar p {
-    color: #6BD202;
+    color:  rgb(224, 230, 218);
     font-size: 1em;
     cursor: pointer;
 
@@ -111,12 +131,12 @@ a{
     animation: 1s ease-in-out close_nav;
 }
 @keyframes open_nav {
-    0% { width: 5vh; height: 100vh;padding-top: 0%;     background-color: #6BD202; }
-    100% { height: 100vh;     width: 20vh; text-align: center; padding-top: 10%; background-color: black; }
+    0% { width: 5vh; height: 100vh;padding-top: 8vh;   background-color: (255, 230, 218); }
+    100% { height: 100vh;     width: 20vh; text-align: center; padding-top: 10vh; background-color: black; }
 }
 @keyframes close_nav {
-    0% { height: 100vh; width: 20vh; padding-top: 10%; background-color: black; }
-    100% {width: 5vh; height: 100vh; text-align: center;padding-top: 0%;     background-color: #6BD202; }
+    0% { height: 100vh; width: 20vh; padding-top: 10vh; background-color: black; }
+    100% {width: 5vh; height: 100vh; text-align: center;padding-top: 8vh;    background-color: (255, 230, 218); }
 }
 
 /* Main Section Styles */
@@ -135,15 +155,16 @@ a{
     margin-top: 50%;
     border-radius: 2px;
     padding: 1rem 2rem;
-    background-color: rgba(107,210,2,0.2);
+    background-color: rgba(234, 255, 248,1);
     border: 3px solid black;
     font-size: 1.2em;
     font-weight: bold;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 1);
     transition: all 0.3s;
     cursor: pointer;
     text-align: center;
     position: sticky;
+    color: black;
 }
 
 .order_btn:hover, .order_btn:active {
@@ -201,7 +222,7 @@ a{
     border-radius: 2px;
     margin: 2rem auto;
     padding: 1rem 2rem;
-    background-color: rgba(107,210,2,0.2);
+    background-color: rgba(234, 255, 248,0.8);
     border: 3px solid black;
     font-size: 1.2em;
     font-weight: bold;
@@ -220,25 +241,45 @@ a{
 .link:focus { outline: none; }
 
 /* who are we */
-.who-are-we-section{
-    position: absolute; /* changed from absolute to relative */
-    left: 12%;
-    height: 100vh;
+.galery{
+    position: relative;
+    margin-left: 15%;
+    height: 50vh;
 }
+.gallery p{
+    position: relative;
+    margin-left: 40%;
+}
+.image{
+    position: relative;
+    margin-left: 20%;
+    image-resolution: normal;
+    height: 200px;
+    width: 300px;
+    left: 30px;
+    box-sizing: border-box;
+    margin-top: 10px; /* Adjust the margin as needed */
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for depth */
+    transition: transform 0.3s ease-in-out; /* Add a smooth transition effect */
+}
+
+.image:hover {
+    transform: scale(1.1); /* Enlarge the image slightly on hover */
+}
+
 /* contact */
-.Contact{
-
-    position: absolute; /* changed from absolute to relative */
-    left: 12%;
-    height: 100vh;
+.Contact-space{
+    position: relative;
+    margin-left: 15%;
+    height: 50vh;
 
 }
-/*policy */
-.policy {
-
-    position: absolute; /* changed from absolute to relative */
-    left: 12%;
-    height: 100vh;
+/*order */
+.order-space{
+    position: relative;
+    margin-left: 15%;
+    height: 50vh;
 
 }
 
@@ -271,7 +312,7 @@ ol li {
 /* Styling for the link in the list item */
 ol li a {
     text-decoration: none;
-    color: black;
+    color: blue;
     transition: color 0.3s;
 }
 

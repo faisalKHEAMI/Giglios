@@ -1,0 +1,594 @@
+<html>
+<head><meta charset="windows-1252">
+
+
+
+    <title>Order</title>
+    <link rel="stylesheet" href="order.css">
+    <!-- Add the Font CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+    <!-- Add jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+</head>
+<body>
+<div class="header">
+    <a href="index.html" class="header_button">
+        <i class="fas fa-arrow-left" style="color: black; position: sticky; top: 3vh; font-size:2em; "></i>
+    </a>
+
+    <h1 class="header_text"> Your order </h1>
+</div>
+<div class="background">
+    <div class="OrderProcess">
+        <section class="orderSteps">
+            <h2>Order Process</h2>
+            <p>Pick your bread</p>
+            <p>Pick the bread size</p>
+            <p>Pick the Meat and Cheese</p>
+            <p>Pick free toppings</p>
+            <p>Pick Extras / Premiums</p>
+            <p>Or pick from our signature sandwiches</p>
+        </section>
+        <section class="paymentInfo">
+            <h2>Payment Information</h2>
+            <p>Make an E-transfer payment with your order number within 15 minutes.</p>
+            <p>If you wish to order multiple items, please place each order individually and make one E-transfer payment.</p>
+        </section>
+    </div>
+</div>
+<div class="makeOrder">
+    <!-- Bread Type -->
+
+    <button type="button" class="collapsible-top" style="border-top:none;">1- Bread Type    <span id="breadPreview"></span><i class="fas fa-arrow-down"></i></button>
+    <form class="breadType" id="breadType" style="display: none;">
+        <legend class="checkbox-group-legend">What's your favorite type of bread?</legend>
+
+        <div class="tile-radio">
+            <input type="radio" class="check" name="breadType" id="white">
+            <label for="white">
+                <i class="fas fa-bread-slice"></i>
+                <h6>Classic White Bread</h6>
+            </label>
+        </div>
+
+        <div class="tile-radio">
+            <input type="radio" class="check" name="breadType" id="wholeGrain">
+            <label for="wholeGrain">
+                <i class="fas fa-bread-slice"></i>
+                <h6> Whole Grain Bread</h6>
+            </label>
+        </div>
+    </form>
+    <!-- Bread Size -->
+    <button type="button" class="collapsible">2- Bread size    <span id="breadSizePreview"></span> <br><i class="fas fa-arrow-down"></i></button>
+    <form class="breadSize" id="breadSize"style="display: none;">
+        <legend class="checkbox-group-legend">Choose your Baguette Size</legend>
+
+        <div class="tile-radio">
+            <input type="radio" class="check" name="breadSize" id="monsterSize" value="17">
+            <label for="monsterSize">
+                <i class="fas fa-bread-slice"></i>
+                <h6>Full Baguette - $17</h6>
+            </label>
+        </div>
+
+        <div class="tile-radio">
+            <input type="radio" class="check" name="breadSize" id="halfMonster" value="9.5">
+            <label for="halfMonster">
+                <i class="fas fa-bread-slice"></i>
+                <h6>Half Baguette - $9.5 </h6>
+            </label>
+        </div>
+    </form>
+
+    <button type="button" class="collapsible" >Our choice Subs<span id="PreSet"></span><i class="fas fa-arrow-down"></i></button>
+    <form class="ourSpecials" id="ourSpecials" style="display: none;">
+        <legend class="checkbox-group-legend">Our choice </legend>
+
+        <div class="tile-radio">
+            <input type="radio" class="preset" name="sub" id="Signature">
+            <label for="Signature">
+                <h6>Our Signature Sandwich </h6>
+            </label>
+        </div>
+
+        <div class="tile-radio">
+            <input type="radio" class="preset" name="sub" id="BlazinBoiler">
+            <label for="BlazinBoiler">
+                <i class="fas fa-pepper-hot"></i>
+                <h6> The Broiler</h6>
+            </label>
+        </div>
+
+        <div class="tile-radio">
+            <input type="radio" class="preset" name="sub" id="Italian">
+            <label for="Italian">
+                <h6> Mild Italian</h6>
+            </label>
+        </div>
+        <div class="tile-radio">
+            <input type="radio" class="preset" name="sub" id="SpicyItalian">
+            <label for="SpicyItalian">
+                <i class="fas fa-pepper-hot"></i>
+                <h6> Spicy Italian</h6>
+            </label>
+
+        </div>
+    </form>
+
+    <button type="button" class="collapsible">3- Meats     <span id="meatPreview"></span> <br><i class="fas fa-arrow-down"></i></button>
+    <form class="meat" id="meat" style="display: none;">
+        <legend class="checkbox-group-legend">Pick your <u>meat</u> <small>& Cheese </small>(4 Max Combined)</legend>
+        <div class="tile">
+            <input type="checkbox" class="check" name="meat" id="smokedRoastChicken">
+            <label for="smokedRoastChicken">
+                <i class="fas fa-drumstick-bite"></i>
+                <h6>Smoked Roast Chicken</h6>
+            </label>
+        </div>
+
+        <div class="tile">
+            <input type="checkbox" class="check" name="meat" id="cajunRoastChicken">
+            <label for="cajunRoastChicken">
+                <i class="fas fa-drumstick-bite"></i>
+                <h6>Cajun Roast Chicken</h6>
+
+            </label>
+        </div>
+
+        <div class="tile">
+            <input type="checkbox" class="check" name="meat" id="smokedHam">
+            <label for="smokedHam">
+                <i class="fas fa-drumstick-bite"></i>
+                <h6>Smoked Ham</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" class="check" name="meat" id="honeyHam">
+            <label for="honeyHam">
+                <i class="fas fa-drumstick-bite"></i>
+                <h6>Honey Ham</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" class="check" name="meat" id="turkeyBreast">
+            <label for="turkeyBreast">
+                <i class="fas fa-drumstick-bite"></i>
+                <h6>Turkey Breast</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" class="check" name="meat" id="hotCapicollo">
+            <label for="hotCapicollo">
+                <i class="fas fa-pepper-hot"></i>
+                <i class="fas fa-drumstick-bite"></i>
+                <h6>Hot Capicollo</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" class="check" name="meat" id="mildCapicollo">
+            <label for="mildCapicollo">
+                <i class="fas fa-drumstick-bite"></i>
+                <h6>Mild Capicollo</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" class="check" name="meat" id="MildMortadella">
+            <label for="MildMortadella">
+                <i class="fas fa-drumstick-bite"></i>
+                <h6>Mild Mortadella</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" class="check" name="meat" id="HotMortadella">
+            <label for="HotMortadella">
+                <i class="fas fa-drumstick-bite"></i>
+                <h6>Hot Mortadella</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" class="check" name="meat" id="montreal">
+            <label for="montreal">
+                <i class="fas fa-drumstick-bite"></i>
+                <h6>Montreal</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" class="check" name="meat" id="roastBeef">
+            <label for="roastBeef">
+                <i class="fas fa-drumstick-bite"></i>
+                <h6>Roast Beef</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" class="check" name="meat" id="prosciutto">
+            <label for="prosciutto">
+                <i class="fas fa-drumstick-bite"></i>
+                <h6>Prosciutto</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" class="check" name="meat" id="genoaSalami">
+            <label for="genoaSalami">
+                <i class="fas fa-drumstick-bite"></i>
+                <h6>Genoa Salami</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" class="check" name="meat" id="hotGenoaSalami">
+            <label for="hotGenoaSalami">
+                <i class="fas fa-pepper-hot"></i>
+                <i class="fas fa-drumstick-bite"></i>
+                <h6>Hot Genoa Salami</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" class="check" name="meat" id="hotCalabreseSalami">
+            <label for="hotCalabreseSalami">
+                <i class="fas fa-pepper-hot"></i>
+                <i class="fas fa-drumstick-bite"></i>
+                <h6>Hot Calabrese Salami</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" class="check" name="meat" id="germanDrySalami">
+            <label for="germanDrySalami">
+                <i class="fas fa-drumstick-bite"></i>
+                <h6>German Dry Salami</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" class="check" name="meat" id="summerSausageSalami">
+            <label for="summerSausageSalami">
+                <i class="fas fa-drumstick-bite"></i>
+                <h6>Summer Sausage Salami</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" class="check" name="meat" id="regularBologna">
+            <label for="regularBologna">
+                <i class="fas fa-drumstick-bite"></i>
+                <h6>Regular Bologna</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" class="check" name="meat" id="hotBologna">
+            <label for="hotBologna">
+                <i class="fas fa-pepper-hot"></i>
+                <i class="fas fa-drumstick-bite"></i>
+                <h6>Hot Bologna</h6>
+            </label>
+        </div>
+
+
+
+    </form>
+
+    <button type="button" class="collapsible"> Cheese          <span id="CheesePreview"></span> <br><i class="fas fa-arrow-down"></i></button>
+    <form class="cheese" id="cheese" style="display: none;">
+        <legend class="checkbox-group-legend">Pick your <small>meat & </small> <u>Cheese</u> (4 Max Combined)</legend>
+
+        <div class="tile">
+            <input type="checkbox" class="check" name="cheese" id="plainHavarti">
+            <label for="plainHavarti">
+                <i class="fas fa-cheese"></i>
+                <h6>Plain Havarti</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" class="check" name="cheese" id="sizzlingHotHavarti">
+            <label for="sizzlingHotHavarti">
+                <i class="fas fa-cheese"></i>
+                <h6>Sizzling Hot Havarti</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" class="check" name="cheese" id="swissCheese">
+            <label for="swissCheese">
+                <i class="fas fa-cheese"></i>
+                <h6>Swiss Cheese</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" class="check" name="cheese" id="mozzarella">
+            <label for="mozzarella">
+                <i class="fas fa-cheese"></i>
+                <h6>Mozzarella</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" class="check" name="cheese" id="provolone">
+            <label for="provolone">
+                <i class="fas fa-cheese"></i>
+                <h6>Provolone</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" class="check" name="cheese" id="marbleCheddar">
+            <label for="marbleCheddar">
+                <i class="fas fa-cheese"></i>
+                <h6>Marble Cheddar</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" class="check" name="cheese" id="oldCheddar">
+            <label for="oldCheddar">
+                <i class="fas fa-cheese"></i>
+                <h6>Old Cheddar</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" class="check" name="cheese" id="ricotta">
+            <label for="ricotta">
+                <i class="fas fa-cheese"></i>
+                <h6>Ricotta</h6>
+            </label>
+        </div>
+
+    </form>
+
+    <button type="button" class="collapsible">4- Sauces        <span id="saucesPreview"></span> <br><i class="fas fa-arrow-down"></i></button>
+    <form class="Sauces" id="sauces" style="display: none;">
+        <legend class="checkbox-group-legend">Choose your favorites sauces ( Up to 2)</legend>
+
+        <div class="tile">
+            <input type="checkbox" class="check" name="sauces" id="mayo">
+            <label for="mayo">
+         
+                <h6>Mayo</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" class="check" name="sauces" id="mustard">
+            <label for="mustard">
+         
+                <h6>Mustard</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" class="check" name="sauces" id="honeymustard">
+            <label for="honeymustard">
+         
+                <h6>Honey Mustard</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" class="check" name="sauces" id="Dijon">
+            <label for="Dijon">
+         
+                <h6>Strong Dijon</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" class="check" name="sauces" id="honeyDijon">
+            <label for="honeyDijon">
+         
+                <h6>honey Dijon</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" class="check" name="sauces" id="ranch">
+            <label for="ranch">
+         
+                <h6>Ranch</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" class="check" name="sauces" id="chipotle">
+            <label for="chipotle">
+                <i class="fas fa-pepper-hot"></i>
+         
+                <h6>Chipotle</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" class="check" name="sauces" id="Tobascoe">
+            <label for="Tobascoe">
+                <i class="fas fa-pepper-hot"></i>
+         
+                <h6>Tobascoe</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" class="check" name="sauces" id="garlicAioli">
+            <label for="garlicAioli">
+                <i class="fas fa-pepper-hot"></i>
+         
+                <h6>Garlic Aioli</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" class="check" name="sauces" id="caesar">
+            <label for="caesar">
+         
+                <h6>Caesar</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" class="check" name="sauces" id="Franks">
+            <label for="Franks">
+                <i class="fas fa-pepper-hot"></i>
+         
+                <h6>Franks</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" class="check" name="sauces" id="Sriracha">
+            <label for="Sriracha">
+                <i class="fas fa-pepper-hot"></i>
+         
+                <h6>Sriracha</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" class="check" name="sauces" id="bbq">
+            <label for="bbq">
+         
+                <h6>BBQ</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" class="check" name="sauces" id="noSauce">
+            <label for="noSauce">
+                <h6>No Sauce</h6>
+            </label>
+        </div>
+    </form>
+
+    <button type="button" class="collapsible">  5-Toppings  <span id="toppingsPreview"></span> <br><i class="fas fa-arrow-down"></i></button>
+    <form class="toppings" id="toppings" style="display: none;">
+        <legend class="checkbox-group-legend">Choose your favorite Toppings</legend>
+        <div class="tile">
+            <input type="checkbox" class="check" name="toppings" id="redOnion">
+            <label for="redOnion">
+                <i class="fas fa-pepper-hot"></i>
+                <h6>Red Onion</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" class="check" name="toppings" id="cucumber">
+            <label for="cucumber">
+                <i class="fas fa-pepper-hot"></i>
+                <h6>cucumber</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" class="check" name="toppings" id="tomatoes">
+            <label for="tomatoes">
+                <i class="fas fa-pepper-hot"></i>
+                <h6>Tomatoes</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" class="check" name="toppings" id="pickles">
+            <label for="pickles">
+                <i class="fas fa-pepper-hot"></i>
+                <h6>Pickles</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" class="check" name="toppings" id="redPeppers">
+            <label for="redPeppers">
+                <i class="fas fa-pepper-hot"></i>
+                <h6>Red Peppers</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" class="check" name="toppings" id="pepperRings">
+            <label for="pepperRings">
+                <i class="fas fa-pepper-hot"></i>
+                <h6>Pepper Rings</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" class="check" name="toppings" id="jalapenos">
+            <label for="jalapenos">
+                <i class="fas fa-pepper-hot"></i>
+                <h6>Jalapenos</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" class="check" name="toppings" id="hotPeppersInoil">
+            <label for="hotPeppersInoil">
+                <i class="fas fa-pepper-hot"></i>
+                <h6>Hot Peppers Inoil</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" class="check" name="toppings" id="lettuce">
+            <label for="lettuce">
+                <i class="fas fa-pepper-hot"></i>
+                <h6>Lettuce</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" class="check" name="toppings" id="fireslaw">
+            <label for="fireslaw">
+                <i class="fas fa-pepper-hot"></i>
+                <h6>Fireslaw</h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" class="check" name="toppings" id="noToppings">
+            <label for="noToppings">
+                <i class="fas fa-pepper-hot"></i>
+                <h6>No Toppings</h6>
+            </label>
+        </div>
+    </form>
+
+    <button type="button" class="collapsible-bottom">Extras        <span id="ExtrasPreviews"></span> <br><i class="fas fa-arrow-down"></i></button>
+    <form class="Extras" id="Extras" style="display: none;">
+        <legend class="checkbox-group-legend">Need Extras / Premium toppings? we got you <small>(+1$ monster size,+ 0.5$ half a monster)</small></legend>
+        <div class="tile">
+            <input type="checkbox" class="check" name="Extras" id="eggPlant" value="1">
+            <label for="eggPlant">
+                <i class="fas fa-pepper-hot"></i>
+                <h6>Pickled egg plant</h6>
+            </label>
+        </div>
+
+        <div class="tile">
+            <input type="checkbox" class="check" name="Extras" id="laBomba" value="1">
+            <label for="laBomba">
+                <i class="fas fa-pepper-hot"></i>
+                <h6>La Bomba </h6>
+            </label>
+        </div>
+        <div class="tile">
+            <input type="checkbox" class="check" name="Extras" id="extraMeat" value="3">
+            <label for="extraMeat">
+                <i class="fas fa-pepper-hot"></i>
+                <h6>Extra Meat</h6>
+            </label>
+        </div>
+
+    </form>
+
+</div>
+<div class="person_info">
+    <form id="personalInfoForm" onsubmit="return false;">
+        <div class="order_preview" >
+            <span id="breadPreview1"></span> <br>
+            <span id="breadSizePreview1"></span> <br>
+            <span id="meatPreview1"></span> <br>
+            <span id="CheesePreview1"></span> <br>
+            <span id="saucesPreview1"></span> <br>
+            <span id="toppingsPreview1"></span> <br>
+            <span id="ExtrasPreviews1"></span> <br>
+            <span id="total"> </span>
+        </div>
+
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required>
+
+        <label for="time">Pick up time:</label>
+        <select style="    position: relative;
+    width: 50%;
+    left: 15%;
+    margin-bottom: 16px;
+    border-bottom: 3px solid currentColor;
+    color: currentColor;
+    background: transparent;
+    border-radius: var(--size-radius);
+    border-top:none;
+    border-right:none;
+    border-left:none;    font-size: 1rem;" id="time" name="time" class="pickTime" required>
+            <option disabled selected value> -- select a time (15 minutes increment)  -- </option>
+        </select>
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+
+        <button class="submitButton" type="submit" value="Submit Order" onclick="submitOrder()">Submit Order</button>
+
+
+    </form>
+</div>
+
+
+<script src="order.js"></script>
+</body>
+</html>
