@@ -1,0 +1,304 @@
+/* Generic Styles */
+body {
+    background-color: rgb(224, 230, 218);/*old color c6c95b*/
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+.topper{
+    position: fixed;
+    height: 8vh;
+    width: 100%;
+    background-color: rgba(0,0,0,0.2);
+    z-index: 2;
+    text-align: center;
+    border-radius: 10px;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    margin-top: -10px;
+}
+
+.logo {
+    margin-top: 0;
+    position: relative;
+    font-family: 'Dancing Script', cursive;
+    font-size: 3em;
+    color: #FF0000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+    display: inline-block;
+    z-index: 3;
+    padding: 0;
+}
+
+/* Navbar Styles */
+.button {
+    height: 40px;
+    width: 10%;
+    z-index: 3;
+    background-color: transparent;
+    border: none;
+    font-family: inherit;
+    display: flex;
+    position: fixed;
+    margin-top: -5vh;
+    left: 5px;
+}
+
+.burger_button {
+    padding-left: 0;
+    z-index: 3;
+    width: 35px;
+    height: 40px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+.burger_line, .burger_line1, .burger_line2 {
+    z-index: 3;
+    width: 100%;
+    height: 10%;
+    background-color: #333333;
+    margin-top: 5px;
+    position: relative;
+
+}
+
+
+.nav_bar {
+    background-color: RGB(193, 218, 191);
+    overflow: hidden;
+    top: 0;
+    margin: 0;
+    left: 0;
+    z-index: 2;
+    width: 5vh;
+    height: 100vh;
+    position: fixed;
+    padding-top: 8vh;
+    box-shadow: 20px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.expand {
+    height: 100vh;
+    width: 20vh;
+    z-index: 2;
+    top: 0;
+    position: fixed;
+    text-align: center;
+    display: block;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    animation: 1s ease-in-out open_nav;
+    padding-top: 10vh;
+
+
+
+}
+.nav_bar a {
+    display: flex;
+    font-size: 1em;
+    margin: 50px 10px;
+    cursor: pointer;
+    position: sticky;
+    color: #c6c95b;
+    text-decoration:none;
+    align-items: center;
+}
+a{
+
+    text-decoration:none;
+
+}
+
+.nav_bar p {
+    color:  rgb(224, 230, 218);
+    font-size: 1em;
+    cursor: pointer;
+
+
+
+}
+.closing {
+    animation: 1s ease-in-out close_nav;
+}
+@keyframes open_nav {
+    0% { width: 5vh; height: 100vh;padding-top: 8vh;   background-color: (255, 230, 218); }
+    100% { height: 100vh;     width: 20vh; text-align: center; padding-top: 10vh; background-color: black; }
+}
+@keyframes close_nav {
+    0% { height: 100vh; width: 20vh; padding-top: 10vh; background-color: black; }
+    100% {width: 5vh; height: 100vh; text-align: center;padding-top: 8vh;    background-color: (255, 230, 218); }
+}
+
+/* Main Section Styles */
+.swiper {
+    position: sticky;
+    background-image: url('https://www.svgrepo.com/show/167832/sandwich.svg');
+    background-repeat: repeat;
+    background-size: 80px;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.order_btn {
+    margin-top: 50%;
+    border-radius: 2px;
+    padding: 1rem 2rem;
+    background-color: rgba(234, 255, 248,1);
+    border: 3px solid black;
+    font-size: 1.2em;
+    font-weight: bold;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 1);
+    transition: all 0.3s;
+    cursor: pointer;
+    text-align: center;
+    position: sticky;
+    color: black;
+}
+
+.order_btn:hover, .order_btn:active {
+    opacity: 100%;
+    background-color: #f8f8f8;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.order_btn:focus { outline: none; }
+
+
+/* Location Section Styles */
+
+.pic {
+    background-image: url("signs.png");
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size:contain ;
+    position: sticky;
+}
+
+
+.map-con {
+        margin-top: 20vh;
+        padding: 2%;
+        left: 17vw;
+        width: 70vw;
+        height: 50vh;
+        position: sticky;
+        text-align: center;
+        z-index: 2;
+        background-color: rgba(107,210,2,0.1);
+        box-shadow: 10px 4px 15px rgba(0, 0, 0, 1);
+        border-radius: 15px;
+        overflow: hidden;
+}
+
+.message {
+    left: 35%;
+    font-size: 2rem;
+    background: transparent;
+    text-align: center;
+    padding: 1rem;
+}
+
+.map {
+    width: 96%;  /* Reduced to allow padding effect inside the container */
+    height: 96%;  /* Reduced to allow padding effect inside the container */
+    border-radius: 15px;  /* Rounded corners */
+}
+.link {
+    display: flex;
+    border-radius: 2px;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    background-color: rgba(234, 255, 248,0.8);
+    border: 3px solid black;
+    font-size: 1.2em;
+    font-weight: bold;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+}
+.link:hover, .link:active {
+    opacity: 100%;
+    background-color: #f8f8f8;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+.link:focus { outline: none; }
+
+/* who are we */
+.who-are-we-section{
+    position: relative;
+    margin-left: 15%;
+    height: 50vh;
+
+}
+/* contact */
+.Contact-space{
+    position: relative;
+    margin-left: 15%;
+    height: 50vh;
+
+}
+/*policy */
+.policy-space{
+    position: relative;
+    margin-left: 15%;
+    height: 50vh;
+
+}
+
+/* Styling for the h1 title */
+h1 {
+
+    color: #333333;
+    text-align: left;
+    padding: 20px 0;
+    border-bottom: 2px solid #B1EE03;
+    margin-bottom: 20px;
+}
+
+/* Styling for the ordered list */
+ol {
+    font-size: 1.2em;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-left: 30px;
+    list-style-type: decimal;
+}
+
+/* Styling for the list items */
+ol li {
+    margin-bottom: 15px;
+
+    color: black;
+}
+
+/* Styling for the link in the list item */
+ol li a {
+    text-decoration: none;
+    color: blue;
+    transition: color 0.3s;
+}
+
+ol li a:hover {
+    color: #6BD202;
+}
+
+/* Styling for the emphasized SUB */
+b {
+    color: #6BD202;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"><meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Giglios</title>
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&amp;display=swap" rel="stylesheet" />
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+	<link href="CSS/giglios.css" rel="stylesheet" /><script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjs33zfR8OmbvCVMIIsnRe72CSJoRGOBg&callback=initMap&libraries=places&v=weekly" defer></script>
+</head>
+<body>
+<div class="topper">
+<h1 class="logo">Giglios</h1>
+</div>
+<!-- Navbar --><!-- make nav ba closes wehen an elements is picked ---->
+
+<div class="nav_bar">
+    <div class="button">
+        <button class="burger_button" onclick="open_nav_bar()">
+            <div class="burger_line"></div>
+            <div class="burger_line1"></div>
+            <div class="burger_line2"></div>
+        </button>
+    </div>
+
+    <a href="#swiper" class="order">
+        <i class="fa fa-hamburger" style="color: #333333;"></i>
+        <p class="nav-text1" style="display:none;">Order a sub</p>
+    </a>
+    <a href="#location-section" class="location">
+        <i class="fa fa-map-pin" style="color: #333333;"></i>
+        <p class="nav-text2" style="display:none;">our location </p>
+    </a>
+    <a href="#who-are-we-section" class="story">
+        <i class="fa fa-book-open" style="color: #333333;"></i>
+        <p class="nav-text3" style="display:none;"> Our story</p>
+    </a>
+    <a href="#Contact" class="contact">
+        <i class="fa fa-envelope" style="color:#333333;"></i>
+        <p class="nav-text4" style="display:none;"> contact us!!</p>
+    </a>
+    <a href="#policy" class="policy">
+        <i class="fa fa-file-alt" style="color: #333333;"></i>
+        <p class="nav-text5" style="display:none;"> Review our policy</p>
+    </a>
+</div>
+<!-- Main Section -->
+
+<section class="swiper" id="swiper"><a class="order_btn" href="order.html">Order a Sub</a></section>
+<!-- Location Section -->
+
+<section id="location-section">
+<p class="message">We heard you want to find us!</p>
+
+<div class="pic"><button class="link" onclick="openLink()">Get Directions</button>
+
+<div class="map-con">
+<div class="map" id="map"></div>
+</div>
+</div>
+</section>
+<section class="order-space" id="order">
+    <h1>The steps for the best <b>SUB</b> order:</h1>
+
+    <ol>
+        <li>Start an order <a href="order.html">here</a></li>
+        <li>Customize the <b>SUB</b> to your taste</li>
+        <li>Use your order confirmation number in your e-transfer description.</li>
+        <li>We will keep you updated on your order status</li>
+        <li>Bon app&eacute;tit!!!</li>
+    </ol>
+</section>
+<!-- Who Are We Section -->
+
+<section class="gallery" id="our-story">
+<p>Our Gallery</p>
+    <img src="DSC_1078 2.JPG" class="image"/>
+    <img src="IMG_5283 2.jpg" class="image"/>
+    <img src="IMG_5282 2.png" class="image"/>
+    <img src="DSC_1075 2.JPG" class="image"/>
+
+</section>
+
+<section class="Contact-space" id="Contact">
+<p>Contact us!</p>
+
+<p>If you have any questions about our policies, please <a href="#Contact">contact us</a>.</p>
+</section>
+<!-- policy -->
+
+
+<script src="giglios.js"></script></body>
+</html>

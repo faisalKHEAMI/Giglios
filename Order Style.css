@@ -1,0 +1,405 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+body, html {
+    background-color: rgba(255, 255, 230, 1);
+    font-family: "Inter", sans-serif;
+    line-height: 1.5;
+    height: 100vh;
+    width: 100vw;
+    display: block;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+}
+
+
+.header {
+    position: fixed;
+    height: 8vh;
+    width: 100%;
+    background-color: rgba(193, 218, 191,0.7);
+    z-index: 2;
+    right: 0;
+    left: 0;
+    margin-top: -10px;
+}
+
+.header_text {
+    transform: translateX(50%);
+    margin-top: 0;
+    position: relative;
+    font-family: 'Dancing Script', cursive;
+    font-size: 3em;
+    color: #FF0000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+    display: inline-block;
+    z-index: 3;
+    padding: 0;;
+}
+
+.header_button {
+    position: sticky;
+}
+
+/* Order process */
+.background{
+    background-image: url("IMG_5282 2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-resolution: inherit;
+    width: 95%;
+    margin: 15% auto 0;
+    border-radius: 20px;
+}
+.OrderProcess {
+    z-index: 1;
+    max-height: 600px;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    width: 100%;
+    margin: 15% auto 0;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    height: 50vw;
+    padding-bottom: 20%;
+    display: block;
+    flex-direction: column;
+    text-align: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+/*  scrollbar appearance in order process */
+.OrderProcess::-webkit-scrollbar {
+    width: 20px;
+}
+
+/* Handle for the scrollbar */
+.OrderProcess::-webkit-scrollbar-thumb {
+    background-color:rgba(0,0,0,0.2); /* You can set the color you prefer */
+    border: 4px solid transparent;
+    border-radius: 8px;
+    background-clip: padding-box;
+}
+
+/* Track (the area the scrollbar moves along) */
+.OrderProcess::-webkit-scrollbar-track {
+    background-color: transparent; /* You can set the color you prefer */
+
+}
+
+
+.orderSteps,
+.paymentInfo {
+    padding-top: 5%;
+}
+
+.orderSteps h2,
+.paymentInfo h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.OrderProcess p {
+    font-style: italic;
+    color: #000;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+
+
+
+.makeOrder {
+    position: relative;
+    height: auto;
+    align-content: flex-start;
+    display: block;
+    width: 95%;
+    margin-left:  2.5%;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    top:5%;
+    margin-bottom: 100px
+}
+.makeOrder form {
+
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    user-select: none;
+}
+.breadType{
+    margin-bottom:0;
+    display: flex;
+    box-shadow: 5px 2px 2px black ;
+}
+
+.breadSize,.ourSubs, .meat,.cheese, .sauces, .toppings, .extras {
+    display: none;
+    box-shadow: 0px 2px 10px black ;
+    margin-bottom:0;
+    width: 98%;
+}
+
+.makeOrder form > * {
+    flex: 0 1 calc(22%);
+    max-width: calc(22%);
+    margin: 0.5rem;
+    box-sizing: border-box;
+
+}
+
+.makeOrder input {
+    height: 30px;
+    margin-bottom: 10px;
+}
+/* button to open close drawers Collapsible button styling */
+.collapsible, .collapsible-top, .collapsible-bottom {
+    background-color: rgba(255, 255, 240,1);
+    height: 60px; /* Adjust the height as needed */
+    width: 100%; /* Adjust the width as needed */
+    border-top: 2px solid black;
+    padding-left: 10%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #333; /* Set your desired text color */
+    font-size: 1rem;
+    transition: background-color 0.3s ease; /* Add a smooth transition effect */
+
+}
+.collapsible-top{
+    border-top-left-radius:10px ;
+    border-top-right-radius:10px ;
+}
+.collapsible-bottom{
+    border-bottom-left-radius:10px ;
+    border-bottom-right-radius: 10px;
+}
+
+/* Arrow icon styling */
+.fas, .fa-arrow-down {
+    margin-left: 10px; /* Adjust the margin as needed */
+    font-size: 1rem;
+    transition: transform 0.3s ease; /* Add a smooth transition effect */
+}
+
+.collapsible.active .fa-arrow-down, .collapsible-top.active .fa-arrow-down, .collapsible-bottom.active .fa-arrow-down {
+    transform: rotate(180deg); /* Rotate the arrow when the button is active */
+
+}
+
+/* Checkboxes and labels style */
+.tile, .tile-radio {
+    width: 100px;
+    height: 150px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    margin: 20px;
+    display: inline-block;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 0;
+}
+
+.tile:before, .tile-radio:before {
+    position: absolute;
+    width: 20%;
+    height: 20%;
+    border: 2px solid #b5bfd9;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 0.25rem;
+    left: 0.25rem;
+    opacity: 0;
+    transform: scale(0);
+    transition: 0.25s ease;
+}
+
+.tile input[type="checkbox"], .tile-radio input[type="radio"] {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.tile label, .tile-radio label {
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+    color: grey;
+}
+
+.tile label i, .tile-radio label i {
+    color: #000;
+}
+
+.tile label:before, .tile-radio label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 15%;
+    margin-top: -15px;
+    width: 25px;
+    height: 30px;
+    border-radius: 20%;
+    background: transparent;
+    border: 2px solid #000;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.tile input[type="checkbox"]:checked + label:before, .tile-radio input[type="radio"]:checked + label:before {
+    background: blue;
+    border: 2px black solid;
+}
+
+.tile input[type="checkbox"]:checked + label:after, .tile-radio input[type="radio"]:checked + label:after {
+    content: "";
+    position: absolute;
+    left: 9px;
+    top: 13px;
+    width: 7px;
+    height: 15px;
+    border: solid #fff;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+    z-index: 1;
+}
+
+.check,.preset {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    margin-right: 70%;
+}
+
+/* Additional styles for a clean look */
+.checkbox-group-legend {
+    font-size: 1.5rem;
+    font-weight: 1000;
+    color: #ac9c9c;
+    text-align: center;
+    margin-bottom: 1.25rem;
+}
+
+/* Optional: Style for the order button */
+.submitButton {
+    background-color: rgba(255, 255, 248,1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 50%;
+    left: 15%;
+}
+
+.submitButton:hover {
+    background-color: #434547;
+}
+
+/* Order preview - person's info */
+.person_info {
+    position: relative;
+    bottom: 0;
+    left: 2.5%;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+    border-radius: 20px;
+    width: 95%;
+    padding-bottom: 20px;
+    margin-top: max(100px,15%);
+}
+
+
+.person_info form {
+    font-size: 1.5rem;
+    position: relative;
+    top: 10%;
+    display: flex;
+    flex-direction: column;
+    left: 10%;
+}
+
+.person_info label {
+    position: relative;
+    left: 5%;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.person_info input {
+    position: relative;
+    width: 50%;
+    left: 15%;
+    margin-bottom: 16px;
+    border-bottom: 3px solid currentColor;
+    color: currentColor;
+    background: transparent;
+    border-radius: var(--size-radius);
+    border-top:none;
+    border-right:none;
+    border-left:none;
+
+}
+
+
+.person_info button {
+
+    border-radius: 2px;
+    padding: 1rem 2rem;
+    background-color: rgba(255, 255, 248,1);
+    border: 3px solid black;
+    font-size: 1.2em;
+    font-weight: bold;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 1);
+    transition: all 0.3s;
+    cursor: pointer;
+    text-align: center;
+    position: relative;
+    color: black;
+}
+
+.person_info button:hover {
+    background-color: #434547;
+
+}
+
+/* Optional: Style for the order preview */
+.order_preview {
+    font-weight: bold;
+    position: relative;
+    display: block;
+    top: 5%;
+    left: 40%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 248,1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid rgba(0, 0, 0,1) ;
+    border-top: 2px solid rgba(0, 0, 0,1) ;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 90%;
+    text-align: center;
+}
